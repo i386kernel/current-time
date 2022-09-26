@@ -1,0 +1,10 @@
+Using this simple application
+
+GET http://localhost:8000/convert?tz=IST
+
+"ASR": "-3h",    // North America Atlantic standard time
+"EST": "-5h",    // North american eastern standard time
+"BST": "+1h",    // British Summer time
+"IST": "+5h30m", // Indian standard time
+"HKT": "+8h",    // Hong Kong Time
+"ART": "-3h",    // Argentina Time
