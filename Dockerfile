@@ -6,6 +6,6 @@ LABEL Maintainer="Solution Engineering Team - TKG(MAPBU)"
 
 WORKDIR /usr/src/app
 
-COPY current-time  ./
+COPY curr-time  ./
 
-CMD "./current-time"
+CMD "./curr-time"

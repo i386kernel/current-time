@@ -26,6 +26,10 @@ func getCurrentTimeWithTimeDifference(timeDifference string) (string, error) {
 	return now.Format("15:04:05"), nil
 }
 
+func addUp(num1, num2 int) int {
+	return num1 + num2
+}
+
 func handler(w http.ResponseWriter, r *http.Request) {
 	timeZone := r.URL.Query().Get("tz")
 	if timeZone == "" {
@@ -66,6 +70,6 @@ func loggingMiddleware(handler handlerFunc) handlerFunc {
 func main() {
 	http.HandleFunc("/convert", loggingMiddleware(handler))
 	http.HandleFunc("/", loggingMiddleware(notFoundHandler))
-	log.Printf("%s - Starting server on port: 8080", time.Now().Format("12-12-1983 20:18"))
-	log.Fatal(http.ListenAndServe("localhost:8080", nil))
+	log.Printf("%s - Starting server on port: 8888", time.Now().Format("12-12-1983 20:18"))
+	log.Fatal(http.ListenAndServe("localhost:8888", nil))
 }

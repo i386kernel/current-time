@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  currentenv:
+    image: docker.io/jenkins/jenkins:lts
+    ports:
+      - '80:8080'
+    environment:
+      - REDIS_URL="localhost:55000"
+      - REDIS_PASSWORD="VMware1!
+    volumes:
+#      - 'jenkins_data:/bitnami/jenkins'
+#      - '/var/jenkins_home/:/var/jenkins_home'
+      - '/Users/lnanjangud/GolandProjects/Experimental-02/Persistance:/var/jenkins_home'
+  redis-server:
+    image: redis
+#volumes:
+#  jenkins_data:
+#    driver: local
