@@ -27,3 +27,4 @@ go.work
 # ignore Essentials Folder
 
 ./Essentials
+./Essentials/*
